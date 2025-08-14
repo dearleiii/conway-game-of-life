@@ -1,6 +1,6 @@
-# 🧬 Conway's Game of Life (Sparse Implementation)
+# 🧬 Conway's Game of Life (With Sparse Implementation)
 
-This project is a terminal-based simulation of **Conway's Game of Life**, implemented using a **sparse data structure** to support a theoretically infinite universe.
+This project is a terminal-based simulation of **Conway's Game of Life**, implemented using both a basic matrix version and a **sparse data structure** to support a theoretically infinite universe.
 
 ---
 
@@ -23,13 +23,16 @@ Instead of using a large 2D array, we represent the grid with a Python `set` con
 
 ```python
 live_cells = {(x1, y1), (x2, y2), ...}
-
+```
 
 ###  Start the Simulation
 
+For basic matrix version:
 ```python game_of_life.py 
+```
+For **sparse data structure** to support a theoretically infinite universe:
 ```python game_of_life_sparse.py
-
+```
 
 It will automatically:
 
