@@ -44,3 +44,14 @@ It will automatically:
 - Fall back to a default glider pattern if the file is missing
 
 - Save the final universe state after the simulation ends
+
+
+###  Paramters
+
+```
+- Store / read path: currently hard-coded "universe.txt", can be modified
+
+- AUTO_PAN: whether to automatically pans the view to show the live patterns 
+
+- MAX_VIEW, PADDING: params to adjust the visualization size in terminal 
+```

@@ -24,8 +24,10 @@ def initialize_gosper_glider_gun(offset_x=0, offset_y=0):
     ]
     return {(x + offset_x, y + offset_y) for x, y in pattern}
 
+
 # Can offset to a large coordinates
 live_cells = initialize_gosper_glider_gun(offset_x=0, offset_y=0)
+
 
 def run_sparse_game_auto_pan():
     live_cells = initialize_gosper_glider_gun(offset_x=0, offset_y=0)

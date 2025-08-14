@@ -125,7 +125,17 @@ def initialize_sparse_glider(x=0, y=0):
 
 def run_sparse_game():
     use_saved = input("Load universe from file? (y/n): ").lower() == 'y'
-    live_cells = initialize_sparse_glider()
+
+    if use_saved:
+        live_cells = load_universe_sparse("universe.txt")
+        if not live_cells:
+            print("Starting with default Gosper Glider pattern instead.")
+            live_cells = initialize_sparse_glider()
+    else:
+        live_cells = initialize_sparse_glider()
+    
+    for i in range(10):
+        time.sleep(DELAY)
     center = (0, 0)
 
     generations = 100
@@ -136,6 +146,8 @@ def run_sparse_game():
             print_sparse(live_cells, center=center, size=20)
         live_cells = next_generation_sparse(live_cells)
         time.sleep(DELAY)
+
+    save_universe_sparse(live_cells)
 
 
 if __name__ == "__main__":
